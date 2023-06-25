@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2596e18e29d099744bb1efb07b5894e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pellets: {fileID: 3287861971957334547}
 --- !u!4 &278674115
 Transform:
   m_ObjectHideFlags: 0
@@ -308,6 +309,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d2a9220cc2d07249a27f18e7f35f672, type: 3}
+--- !u!4 &3287861971957334547 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3287861972222080607, guid: 0d2a9220cc2d07249a27f18e7f35f672, type: 3}
+  m_PrefabInstance: {fileID: 3287861971957334546}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5893632463635493021
 PrefabInstance:
   m_ObjectHideFlags: 0
