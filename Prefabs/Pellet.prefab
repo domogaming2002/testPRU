@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1581884497303241546}
   - component: {fileID: 6833022680863907044}
   - component: {fileID: 7616110768807210315}
+  - component: {fileID: -7131666654757695627}
   m_Layer: 8
   m_Name: Pellet
   m_TagString: Untagged
@@ -102,7 +103,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.24, y: 0.24}
+    oldSize: {x: 0.8, y: 0.8}
     newSize: {x: 0.24, y: 0.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -111,3 +112,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.07980245, y: 0.072590396}
   m_EdgeRadius: 0
+--- !u!114 &-7131666654757695627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4847440629962762346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41c58761d2ec5e34f959ead5068e0907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

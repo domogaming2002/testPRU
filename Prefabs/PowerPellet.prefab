@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 135615308715278184}
   - component: {fileID: 3928217423190642375}
   - component: {fileID: 135615308715278185}
+  - component: {fileID: 8625705520258419059}
   m_Layer: 8
   m_Name: PowerPellet
   m_TagString: Untagged
@@ -103,7 +104,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.24, y: 0.24}
+    oldSize: {x: 0.8, y: 0.8}
     newSize: {x: 0.24, y: 0.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -133,3 +134,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8625705520258419059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051276494650035174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb3e121a3afa06c4db69d4e7f1db86b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
