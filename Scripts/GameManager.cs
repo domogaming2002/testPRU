@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
     {
         pellet.gameObject.SetActive(false);
 
-        SetScore(this.score + pellet.point);
+        //SetScore(this.score + pellet.point);
 
         if (!HasRemainingPellets())
         {
