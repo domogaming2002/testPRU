@@ -42,11 +42,12 @@ public class Movement : MonoBehaviour
         enabled = true;
     }
 
-    public void Update()
+    private void Update()
     {
-        if(nextDirection != Vector2.zero)           //co huong di chuyen moi
+        if (nextDirection != Vector2.zero)
         {
-            SetDirection(nextDirection);            //Set huong di chuyen moi 
+            
+            SetDirection(nextDirection);
         }
     }
 
@@ -67,8 +68,8 @@ public class Movement : MonoBehaviour
             nextDirection = Vector2.zero;
         }
         else
-        {            
-            nextDirection = this.direction;
+        {
+            nextDirection = direction;
         }
     }
 

@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
     public void SetScore(int score)
     {
         this.score = score;
+        Debug.Log("Diem hien tai:" + score);
     }
 
     public void GhostEaten()
@@ -79,25 +80,26 @@ public class GameManager : MonoBehaviour
     {
         pellet.gameObject.SetActive(false);
 
-        //SetScore(this.score + pellet.point);
+        SetScore(this.score + pellet.point);
 
         if (!HasRemainingPellets())
         {
-            
-            Invoke(nameof(NewRound), 3.0f);
+
+            //Invoke(nameof(NewRound), 3.0f);
+            Debug.Log("End game");
         }
     } 
     
     public void PowerPelletEaten(PowerPellet pellet)
     {
         PelletEaten(pellet);
-
+        
         //thjay doi trang thai cua ma
     }
 
     public bool HasRemainingPellets()
     {
-        foreach(Transform pellet in this.pellets)
+        foreach (Transform pellet in this.pellets)
         {
             if (pellet.gameObject.activeSelf)
             {
