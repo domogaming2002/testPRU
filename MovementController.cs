@@ -5,6 +5,11 @@ using UnityEngine;
 public class MovementController : MonoBehaviour
 {
     public GameObject currentNode;
+    public float speed = 4f;
+
+    public string direction = "";
+    public string lastMovingDirection;
+
     public void SetDirection(string direction)
     {
 
