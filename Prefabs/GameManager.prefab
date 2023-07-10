@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &254513745723898165
+--- !u!1 &8411202119307269531
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5237503764105005137}
-  - component: {fileID: 6732845151599752293}
+  - component: {fileID: 785372194544125716}
+  - component: {fileID: 4020017945943910472}
+  - component: {fileID: 2129383166602879687}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -17,31 +18,60 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5237503764105005137
+--- !u!4 &785372194544125716
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 254513745723898165}
+  m_GameObject: {fileID: 8411202119307269531}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.539249, y: -12.477493, z: -0.045750666}
+  m_LocalPosition: {x: 21.429703, y: -9.819384, z: -0.020775115}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6732845151599752293
+--- !u!114 &4020017945943910472
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 254513745723898165}
+  m_GameObject: {fileID: 8411202119307269531}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 235ddbbffa5043f48997bee0dc0d24a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftWarpNode: {fileID: 0}
+  rightWarpNode: {fileID: 0}
+--- !u!114 &2129383166602879687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8411202119307269531}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2596e18e29d099744bb1efb07b5894e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pellets: {fileID: 0}
+  leftWarpNode: {fileID: 0}
+  rightWarpNode: {fileID: 0}
+  pacman: {fileID: 0}
+  ghostNodeLeft: {fileID: 0}
+  ghostNodeRight: {fileID: 0}
+  ghostNodeCenter: {fileID: 0}
+  ghostNodeStart: {fileID: 0}
+  redGhost: {fileID: 0}
+  pinkGhost: {fileID: 0}
+  blueGhost: {fileID: 0}
+  orangeGhost: {fileID: 0}
+  totalPellets: 0
+  pelletsLeft: 0
+  pelletedCollectedOnThisLife: 0
+  currentGhostMode: 0

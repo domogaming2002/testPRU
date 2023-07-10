@@ -11,12 +11,54 @@ public class GameManager : MonoBehaviour
     public Transform pellets;
     public int score { get; set; }
     public int lives { get; set; }
+    
+    public GameObject leftWarpNode;
 
+    public GameObject rightWarpNode;
+
+    public GameObject pacman;
+    
+    public GameObject ghostNodeLeft;
+    public GameObject ghostNodeRight;
+    public GameObject ghostNodeCenter;
+    public GameObject ghostNodeStart;
+
+    public GameObject redGhost;
+    public GameObject pinkGhost;
+    public GameObject blueGhost;
+    public GameObject orangeGhost;
+
+    public int totalPellets = 0;
+    public int pelletsLeft = 0;
+    public int pelletedCollectedOnThisLife = 0;
+    public enum GhostMode
+    {
+        chase, scatter
+    }
+
+    public GhostMode currentGhostMode;
+    
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        GetTotalPellets();
+        pinkGhost.GetComponent<EnemyController>().readyToLeaveHome = true;
+        currentGhostMode = GhostMode.chase;
         NewGame();
+    }
+
+    void GetTotalPellets()
+    {
+        foreach (Transform pellet in this.pellets)
+        {
+            if (pellet.gameObject.activeSelf)
+            {
+                totalPellets++;
+            }
+        }
+
+        Debug.Log("total pellet = " + totalPellets);
     }
 
     private void NewGame()
@@ -78,6 +120,7 @@ public class GameManager : MonoBehaviour
 
     public void PelletEaten(Pellet pellet)
     {
+        totalPellets++;
         pellet.gameObject.SetActive(false);
 
         SetScore(this.score + pellet.point);
@@ -99,13 +142,17 @@ public class GameManager : MonoBehaviour
 
     public bool HasRemainingPellets()
     {
-        foreach (Transform pellet in pellets)
+        var pelletCount = 0;
+        foreach (Transform pellet in this.pellets)
         {
             if (pellet.gameObject.activeSelf)
             {
-                return true;
+                Debug.Log("hayyyyyyyy");
+                pelletCount++;
             }
         }
-        return false;
+
+        pelletsLeft = pelletCount;
+        return pelletCount > 0;
     }
 }
