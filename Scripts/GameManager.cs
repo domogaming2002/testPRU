@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour
 
     public bool HasRemainingPellets()
     {
-        foreach (Transform pellet in this.pellets)
+        foreach (Transform pellet in pellets)
         {
             if (pellet.gameObject.activeSelf)
             {
