@@ -44,8 +44,22 @@ public class EnemyController : MonoBehaviour
 
     public GameObject[] scatterNodes;
     public int scatterNodeIndex;
+
+    public bool isVisible = true;
+
+    public SpriteRenderer ghostSprite;
+    public SpriteRenderer eyesSprite;
+
+    public Animator animator;
+
+    public Color color;
+
     private void Awake()
     {
+        animator = GetComponent<Animator>();
+        ghostSprite = GetComponent<SpriteRenderer>();
+        eyesSprite = GetComponentInChildren<SpriteRenderer>();
+
         scatterNodeIndex = 0;
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         movementController = GetComponent<GhostMovement>();
@@ -78,11 +92,48 @@ public class EnemyController : MonoBehaviour
         movementController.currentNode = startingNode;
         transform.position = startingNode.transform.position;
     }
+
+    public void SetUp()
+    {
+        animator.SetBool("moving", false);
+    }
+
+    
     
 
     // Update is called once per frame
     void Update()
     {
+        //Show our sprites
+        if (isVisible)
+        {
+            if (ghostNodesState != GhostNodeStatesEnum.respawning)
+            {
+                ghostSprite.enabled = true;
+            }
+            eyesSprite.enabled = true;
+        } else
+        {
+            ghostSprite.enabled = false;
+            eyesSprite.enabled = false;
+        }
+
+
+        if (isFrightened)
+        {
+            animator.SetBool("frightened", true);
+            //eyesSprite.enabled = false;
+            ghostSprite.color = new Color(255, 255, 255, 255);
+        } else
+        {
+            animator.SetBool("frightened", false);
+            ghostSprite.color = color;
+
+        }
+
+        animator.SetBool("moving", true);
+
+
         if (testRespawn == true)
         {
             readyToLeaveHome = false;
