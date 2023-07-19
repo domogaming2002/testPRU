@@ -16,7 +16,7 @@ public class QuitButton : MonoBehaviour
     {
     }
     public void quitGame(){
-        SceneManager.LoadScene("GameOverScene");
+        // SceneManager.LoadScene("GameOverScene");
         // Application.Quit();
     }
 }

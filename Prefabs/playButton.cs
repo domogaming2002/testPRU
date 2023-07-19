@@ -18,6 +18,6 @@ public class playButton : MonoBehaviour
     }
     public void changeScene()
     {
-        SceneManager.LoadScene("testScene");
+        SceneManager.LoadScene("Ghost");
     }
 }
