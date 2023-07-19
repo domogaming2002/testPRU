@@ -34,6 +34,7 @@ public class Movement : MonoBehaviour
     //Dat lai vi tri ban dau 
     public void ResetState()
     {
+        //Debug.Log("reset in movement.cs");
         /*speedMultiplier = 1.0f;*/
         direction = initialDirection;
         nextDirection = Vector2.zero;
@@ -44,6 +45,10 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
+        /*if (GameObject.Find("GameManager").GetComponent<GameManager>().gameIsRunning)
+        {
+            return;
+        }??????????*/
         if (nextDirection != Vector2.zero)
         {
             

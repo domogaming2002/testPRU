@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GhostMovement : MonoBehaviour
 {
-    public GameManagerController gameManager;
+    public GameManager gameManager;
     public GameObject currentNode;
 
     public float speed = 1f;
@@ -19,12 +19,16 @@ public class GhostMovement : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManagerController>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!gameManager.gameIsRunning)
+        {
+            return;
+        }
         var currentNodeController = currentNode.GetComponent<GhostNodeController>();
 
         transform.position = Vector2.MoveTowards(transform.position, currentNode.transform.position, speed * Time.deltaTime);
